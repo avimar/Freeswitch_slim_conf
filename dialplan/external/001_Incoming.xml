@@ -1,0 +1,8 @@
+<include>
+  <!--This will transfer you to a local extension given if the call was sent unauthenticated-->
+  <exension name="Local_Extensions">
+    <condition field="destination_number" expression="^(10[0-1][0-9])$">
+      <action application="transfer" data="$1 XML internal" />
+    </condition>
+  </exension>
+</include>
